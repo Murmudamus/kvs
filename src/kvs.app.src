@@ -1,0 +1,11 @@
+%% -*- mode: erlang;erlang-indent-level: 2;indent-tabs-mode: nil -*-
+{application, kvs, [ {description,  "Key Value Store"}
+                   , {vsn,          git}
+                   , {registered,   []}
+                   , {applications, [kernel, stdlib, inets]}
+                   , {env,          [ {restart_type, transient}
+                                    , {shutdown,     2000}
+                                    , {child_type,   worker}
+                                    ]}
+                   , {mod,          {kvs_app, []}}
+                   ]}.
